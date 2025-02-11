@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathStrat.ai - Chatbot</title>
+    
+    <!-- Bootstrap CSS for a professional look -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center vh-100">
+        <!-- Chatbot Header -->
+        <h1 class="mt-4 mb-3 text-center text-light">MathStrat.ai</h1>
+
+        <!-- Chat Box -->
+        <div id="chat-box" class="border rounded p-3 mb-3 chat-box w-100">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-group mb-3 w-100">
+            <input type="text" id="user-input" class="form-control" placeholder="Type your message..." 
+                   onkeypress="handleKeyPress(event)" aria-label="Chat Input">
+            <div class="input-group-append">
+                <button id="send-button" class="btn btn-primary" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
