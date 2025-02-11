@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background: #181818;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Header */
+.chat-header {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* User Messages */
+.message.user {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    align-self: flex-end;
+    word-wrap: break-word;
+}
+
+/* Assistant Messages */
+.message.assistant {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    align-self: flex-start;
+    word-wrap: break-word;
+}
+
+/* Typing Indicator */
+.message.typing {
+    font-style: italic;
+    color: #bbb;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    align-self: flex-start;
+    animation: blink 1.2s infinite;
+}
+
+/* Blinking effect for typing indicator */
+@keyframes blink {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* Chat Input */
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#send-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#send-btn img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Makes the send icon white */
+}
